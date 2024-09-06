@@ -1,0 +1,84 @@
+/* Container to center the preloader */
+#pl_preloader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: transparent; /* Background color for a cinematic feel */
+    position: relative;
+    backdrop-filter: blur(15px);
+  }
+  
+  /* Dancing character */
+  #pl_dancing-character {
+    width: 100px;
+    height: 100px;
+    /* background: url('https://example.com/dancing-character.png') no-repeat center center; */
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pl_dance 2s infinite;
+  }
+  
+  /* Keyframes for dancing animation */
+  @keyframes pl_dance {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+    }
+    25% {
+      transform: translate(-50%, -50%) rotate(10deg) translateY(-10px);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+    }
+    75% {
+      transform: translate(-50%, -50%) rotate(-10deg) translateY(10px);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+    }
+  }
+  
+  /* Text styling */
+  #pl_preloader-text {
+    display: flex;
+    gap: 0.2rem;
+    font-size: 4rem;
+    color: #c71414; /* Text color */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  /* Individual character styling */
+  .pl_char {
+    display: inline-block;
+    animation: pl_charMove 1.5s infinite;
+  }
+  
+  /* Unique animation for each character */
+  @keyframes pl_charMove {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-15px) rotate(15deg);
+    }
+    50% {
+      transform: translateY(0) rotate(0deg);
+    }
+    75% {
+      transform: translateY(15px) rotate(-15deg);
+    }
+  }
+  
+  /* Add unique animations to each character */
+  .pl_char-0 { animation-delay: 0s; }
+  .pl_char-1 { animation-delay: 0.2s; }
+  .pl_char-2 { animation-delay: 0.4s; }
+  .pl_char-3 { animation-delay: 0.6s; }
+  .pl_char-4 { animation-delay: 0.8s; }
+  

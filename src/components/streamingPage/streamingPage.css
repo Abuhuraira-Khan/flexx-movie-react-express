@@ -1,0 +1,159 @@
+#stremingPage{
+    box-sizing: border-box;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat no-repeat;
+}
+
+#stremingPage #streaming_wrapper{
+    width: 64%;
+    background-color: rgba(7, 7, 7, 90%);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+#stremingPage #streaming-container{
+    color: #bebebe;
+    font-size: 18px;
+}
+#stremingPage #streamPlayer_container{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+#stremingPage #strem_video_details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+#stremingPage #strem_video_details #svd_details_choice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #c71414;
+}
+#stremingPage #strem_video_details #svd_user_choice{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #c71414;
+}
+#stremingPage #strem_video_details #svd_user_choice button{
+    border: none;
+    background-color: transparent;
+    color: red;
+}
+#stremingPage #strem_video_details #svd_user_choice button svg{
+    width: 24px;
+    height: 24px;
+}
+
+#stremingPage #strem_video_details #stream_video_genres{
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#stremingPage #strem_video_details #stream_video_description{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#stremingPage #strem_video_details #stream_video_description #stream_video_description_text{
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    transition: .5s;
+    
+}
+#stremingPage #strem_video_details #stream_video_description #stream_video_description_text_expand{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    
+}
+#stremingPage #strem_video_details #stream_video_description #svd_text_seeBtn{
+    cursor:pointer;
+}
+
+#stremingPage #strem_video_details #stream_video_comments_not_expand{
+    width: 100%;
+    overflow-y: hidden;
+    height: 0px;
+}
+#stremingPage #strem_video_details #stream_video_comments_expand{
+    width: 100%;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+#stremingPage #strem_video_details #stream_video_comments_add_input{
+    resize: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 100%;
+    color: #bebebe;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid red;
+    max-height: 100px;
+}
+#stremingPage #strem_video_details #stream_video_comments_add button{
+    border: none;
+    outline: none;
+    background: rgb(43, 44, 44);
+    padding: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 10%;
+    cursor: pointer;
+}
+#stremingPage #strem_video_details #stream_video_comments_add button:nth-child(3){
+    margin-left: 5px;
+    background: rgb(43, 44, 44);
+
+}
+
+#stremingPage #strem_video_details  #stream_video_comments #stream_video_comments_list{
+    margin-top: 10px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* responsive */
+
+@media screen and (max-width:800px) {
+    #stremingPage #streaming_wrapper{
+        width: 100%;
+        background-color: rgba(7, 7, 7, 90%);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+    }
+    #stremingPage #strem_video_details #svd_details_choice{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        color: #c71414;
+    }
+    #stremingPage #strem_video_details #svd_user_choice{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        justify-content: right;
+        color: #c71414;
+    }
+}
